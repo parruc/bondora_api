@@ -1,0 +1,51 @@
+# MyInvestmentsRequest
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**loan_issued_date_from** | **datetime** | Loan issued start date from | [optional] 
+**loan_issued_date_to** | **datetime** | Loan issued start date to | [optional] 
+**principal_min** | **float** | Remaining principal amount min | [optional] 
+**principal_max** | **float** | Remaining principal amount max | [optional] 
+**interest_min** | **float** | Interest rate min | [optional] 
+**interest_max** | **float** | Interest rate max | [optional] 
+**length_max** | **int** | Loan lenght min | [optional] 
+**length_min** | **int** | Loan lenght max | [optional] 
+**late_principal_amount_min** | **float** | Principal debt amount min | [optional] 
+**late_principal_amount_max** | **float** | Principal debt amount max | [optional] 
+**debt_occured_on_from** | **datetime** | Principal debt started date from | [optional] 
+**debt_occured_on_to** | **datetime** | Principal debt started date to | [optional] 
+**debt_occured_on_for_secondary_from** | **datetime** | Interest debt started date from | [optional] 
+**debt_occured_on_for_secondary_to** | **datetime** | Interest debt started date to | [optional] 
+**defaulted_date_from** | **datetime** | Defaulted date from | [optional] 
+**defaulted_date_to** | **datetime** | Defaulted date to | [optional] 
+**rescheduled_from** | **datetime** | Defaulted date from | [optional] 
+**rescheduled_to** | **datetime** | Defaulted date to | [optional] 
+**sold_date_from** | **datetime** | When it was sold on Secondary market from | [optional] 
+**sold_date_to** | **datetime** | When it was sold on Secondary market to | [optional] 
+**purchase_date_from** | **datetime** | When you received the investment Auctions/Secondary market from | [optional] 
+**purchase_date_to** | **datetime** | When you received the investment Auctions/Secondary market to | [optional] 
+**next_payment_date_to** | **datetime** | Next payment date to | [optional] 
+**next_payment_date_from** | **datetime** | Next payment date from | [optional] 
+**last_payment_date_from** | **datetime** | Last payment date from | [optional] 
+**last_payment_date_to** | **datetime** | Last payment date to | [optional] 
+**countries** | **list[str]** | Two letter iso code for country of origin: EE, ES, FI | [optional] 
+**ratings** | **list[str]** | Bondora&#39;s rating: AA, A, B, C, D, E, F, HR | [optional] 
+**credit_score_min** | **int** | Minimum credit score | [optional] 
+**credit_score_max** | **int** | Maximum credit score | [optional] 
+**user_name** | **str** | Borrower&#39;s username | [optional] 
+**loan_status_code** | **list[int]** | Loan status code              &lt;para&gt;2 Current&lt;/para&gt;&lt;para&gt;3 Cancelled&lt;/para&gt;&lt;para&gt;100 Overdue&lt;/para&gt;&lt;para&gt;5 60+ days overdue&lt;/para&gt;&lt;para&gt;4 Repaid&lt;/para&gt;&lt;para&gt;8 Released&lt;/para&gt; | [optional] 
+**income_verification_status** | **int** | Income verification type | [optional] 
+**loan_debt_management_stage** | **int** | Latest debt management stage | [optional] 
+**loan_debt_management_stage_type** | **int** | Latest debt management stage type | [optional] 
+**loan_debt_management_date_active_from** | **datetime** | Latest debt management date active from | [optional] 
+**loan_debt_management_date_active_to** | **datetime** | Latest debt management date active to | [optional] 
+**auction_bid_type** | **int** | Auction bid type | [optional] 
+**sales_status** | **int** | Second market sale status              &lt;para&gt;NULL All active&lt;/para&gt;&lt;para&gt;0 Bought investments&lt;/para&gt;&lt;para&gt;1 Sold investments&lt;/para&gt;&lt;para&gt;2 Investment is on sale&lt;/para&gt;&lt;para&gt;3 Investment is not on sale&lt;/para&gt; | [optional] 
+**is_in_repayment** | **bool** | Search only active in repayment loans, StatusCodes (2, 5, 100) | [optional] 
+**page_size** | **int** | Max items in result, default is 1000 | [optional] 
+**page_nr** | **int** | Result page nr | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
