@@ -27,8 +27,8 @@ def oauth2_get_token():
     oauth = OAuth2Session(params["client_id"], scope=params["scope"])
     if "access_token" not in params:
         authorization_url, state = oauth.authorization_url(params["auth_url"])
-        print 'Please go to %s and authorize access.' % authorization_url
-        authorization_response = raw_input('Paste the full redirect URL here:')
+        print('Please go to %s and authorize access.' % authorization_url)
+        authorization_response = input('Paste the full redirect URL here:')
         token = oauth.fetch_token(
             params["token_url"],
             authorization_response=authorization_response,

@@ -60,6 +60,7 @@ def main():
     secondary_api = bondora_api.SecondMarketApi()
     results = secondary_api.second_market_get_active(**params)
     pprint(results)
+    params.pop("request_next_payment_date_from")
     save_config_file(params, CONFIG_FILE_PATH)
 
 
