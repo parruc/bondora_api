@@ -5,7 +5,7 @@ import json
 import logging
 from pprint import pprint
 
-from investhor import bondora_api
+import bondora_api
 from investhor.utils import load_config_file
 from investhor.utils import oauth2_get_token
 from investhor.utils import save_config_file
@@ -45,6 +45,8 @@ def get_params():
     args = parser.parse_args()
     return vars(args)
 
+def have_to_invest(result):
+    return result.income_verification_status > 2
 
 def main():
     params = get_params()
@@ -59,7 +61,8 @@ def main():
     # create an instance of the API class
     secondary_api = bondora_api.SecondMarketApi()
     results = secondary_api.second_market_get_active(**params)
-    pprint(results)
+    to_invest = [r for r in results.payload if have_to_invest(r)]
+    pprint(to_invest)
     params.pop("request_next_payment_date_from")
     save_config_file(params, CONFIG_FILE_PATH)
 
