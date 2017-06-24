@@ -5,10 +5,10 @@ import json
 import logging
 from pprint import pprint
 
-import bondora_api
-from utils import load_config_file
-from utils import oauth2_get_token
-from utils import save_config_file
+from investhor import bondora_api
+from investhor.utils import load_config_file
+from investhor.utils import oauth2_get_token
+from investhor.utils import save_config_file
 
 # from bondora_api.rest import ApiException
 CONFIG_FILE_PATH = "config/secondary.json"
