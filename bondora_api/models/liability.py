@@ -109,7 +109,7 @@ class Liability(object):
         :param type_of_liability: The type_of_liability of this Liability.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "101", "102", "103", "104", "105", "106", "107", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 101, 102, 103, 104, 105, 106, 107, -1]
         if type_of_liability not in allowed_values:
             raise ValueError(
                 "Invalid value for `type_of_liability` ({0}), must be one of {1}"
@@ -207,7 +207,7 @@ class Liability(object):
         :param collateral_type: The collateral_type of this Liability.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, -1]
         if collateral_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `collateral_type` ({0}), must be one of {1}"

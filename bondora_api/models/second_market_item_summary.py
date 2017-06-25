@@ -293,7 +293,7 @@ class SecondMarketItemSummary(object):
         :param status_code: The status_code of this SecondMarketItemSummary.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3"]
+        allowed_values = [0, 1, 2, 3]
         if status_code not in allowed_values:
             raise ValueError(
                 "Invalid value for `status_code` ({0}), must be one of {1}"

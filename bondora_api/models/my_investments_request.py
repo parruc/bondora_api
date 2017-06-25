@@ -930,7 +930,7 @@ class MyInvestmentsRequest(object):
         :param income_verification_status: The income_verification_status of this MyInvestmentsRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4"]
+        allowed_values = [1, 2, 3, 4]
         if income_verification_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `income_verification_status` ({0}), must be one of {1}"
@@ -959,7 +959,7 @@ class MyInvestmentsRequest(object):
         :param loan_debt_management_stage: The loan_debt_management_stage of this MyInvestmentsRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "7", "9", "14", "15", "16", "20", "22", "23", "24", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"]
+        allowed_values = [1, 2, 7, 9, 14, 15, 16, 20, 22, 23, 24, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         if loan_debt_management_stage not in allowed_values:
             raise ValueError(
                 "Invalid value for `loan_debt_management_stage` ({0}), must be one of {1}"
@@ -988,7 +988,7 @@ class MyInvestmentsRequest(object):
         :param loan_debt_management_stage_type: The loan_debt_management_stage_type of this MyInvestmentsRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "-1"]
+        allowed_values = [1, 2, 3, -1]
         if loan_debt_management_stage_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `loan_debt_management_stage_type` ({0}), must be one of {1}"
@@ -1063,7 +1063,7 @@ class MyInvestmentsRequest(object):
         :param auction_bid_type: The auction_bid_type of this MyInvestmentsRequest.
         :type: int
         """
-        allowed_values = ["0", "1", "2"]
+        allowed_values = [0, 1, 2]
         if auction_bid_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `auction_bid_type` ({0}), must be one of {1}"

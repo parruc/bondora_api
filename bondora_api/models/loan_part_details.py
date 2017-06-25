@@ -581,7 +581,7 @@ class LoanPartDetails(object):
         :param use_of_loan: The use_of_loan of this LoanPartDetails.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, -1]
         if use_of_loan not in allowed_values:
             raise ValueError(
                 "Invalid value for `use_of_loan` ({0}), must be one of {1}"
@@ -610,7 +610,7 @@ class LoanPartDetails(object):
         :param income_verification_status: The income_verification_status of this LoanPartDetails.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4"]
+        allowed_values = [1, 2, 3, 4]
         if income_verification_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `income_verification_status` ({0}), must be one of {1}"
@@ -708,7 +708,7 @@ class LoanPartDetails(object):
         :param gender: The gender of this LoanPartDetails.
         :type: int
         """
-        allowed_values = ["0", "1", "2"]
+        allowed_values = [0, 1, 2]
         if gender not in allowed_values:
             raise ValueError(
                 "Invalid value for `gender` ({0}), must be one of {1}"

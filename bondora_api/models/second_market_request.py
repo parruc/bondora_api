@@ -448,7 +448,7 @@ class SecondMarketRequest(object):
         :param loan_debt_management_stage_type: The loan_debt_management_stage_type of this SecondMarketRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "-1"]
+        allowed_values = [1, 2, 3, -1]
         if loan_debt_management_stage_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `loan_debt_management_stage_type` ({0}), must be one of {1}"
@@ -615,7 +615,7 @@ class SecondMarketRequest(object):
         :param use_of_loan: The use_of_loan of this SecondMarketRequest.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, -1]
         if use_of_loan not in allowed_values:
             raise ValueError(
                 "Invalid value for `use_of_loan` ({0}), must be one of {1}"
@@ -851,7 +851,7 @@ class SecondMarketRequest(object):
         :param income_verification_status: The income_verification_status of this SecondMarketRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4"]
+        allowed_values = [1, 2, 3, 4]
         if income_verification_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `income_verification_status` ({0}), must be one of {1}"

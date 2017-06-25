@@ -100,7 +100,7 @@ class DebtManagementEvent(object):
         :param event_type: The event_type of this DebtManagementEvent.
         :type: int
         """
-        allowed_values = ["1", "2", "7", "9", "14", "15", "16", "20", "22", "23", "24", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"]
+        allowed_values = [1, 2, 7, 9, 14, 15, 16, 20, 22, 23, 24, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         if event_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `event_type` ({0}), must be one of {1}"

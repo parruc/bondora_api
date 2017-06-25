@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import argparse
-import datetime
 import json
 import logging
 from pprint import pprint
@@ -9,9 +8,11 @@ import bondora_api
 from investhor.utils import load_config_file
 from investhor.utils import oauth2_get_token
 from investhor.utils import save_config_file
+from investhor.utils import add_next_payment_day_filters
+from investhor.utils import clean_params
 
 # from bondora_api.rest import ApiException
-CONFIG_FILE_PATH = "config/secondary.json"
+CONFIG_FILE = "secondary.json"
 
 
 def get_cli_parser(defaults):
@@ -33,26 +34,24 @@ def get_cli_parser(defaults):
     return parser
 
 
-def get_params():
+def get_params(config_file):
     """Gets the scripts params.
        Resolution order is cli -> .config file -> parser defaults
     """
     try:
-        defaults = load_config_file(CONFIG_FILE_PATH)
+        defaults = load_config_file(config_file)
     except Exception:
         defaults = {}
     parser = get_cli_parser(defaults)
-    args = parser.parse_args()
-    return vars(args)
+    args = vars(parser.parse_args())
+    defaults.update(args)
+    return defaults
 
-def have_to_invest(result):
-    return result.income_verification_status > 2
 
 def main():
-    params = get_params()
+    params = get_params(CONFIG_FILE)
     # Get only those that has next payment at least one month from now
-    next_30_days = datetime.datetime.today() + datetime.timedelta(30)
-    params["request_next_payment_date_from"] = next_30_days.isoformat()
+    params = add_next_payment_day_filters(params)
     # Configure OAuth2 access token for authorization: oauth2
     # bondora_api.configuration.debug = True
     auth_token = oauth2_get_token()
@@ -60,11 +59,11 @@ def main():
     bondora_api.configuration.host = "https://api.bondora.com"
     # create an instance of the API class
     secondary_api = bondora_api.SecondMarketApi()
-    results = secondary_api.second_market_get_active(**params)
-    to_invest = [r for r in results.payload if have_to_invest(r)]
-    pprint(to_invest)
-    params.pop("request_next_payment_date_from")
-    save_config_file(params, CONFIG_FILE_PATH)
+    request_params = {k: params[k] for k in params if k.startswith("request_")}
+    results = secondary_api.second_market_get_active(**request_params)
+    pprint(results)
+    clean_params(params)
+    save_config_file(params, CONFIG_FILE)
 
 
 if __name__ == "__main__":

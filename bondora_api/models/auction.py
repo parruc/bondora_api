@@ -470,7 +470,7 @@ class Auction(object):
         :param verification_type: The verification_type of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4"]
+        allowed_values = [1, 2, 3, 4]
         if verification_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `verification_type` ({0}), must be one of {1}"
@@ -499,7 +499,7 @@ class Auction(object):
         :param language_code: The language_code of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+        allowed_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
         if language_code not in allowed_values:
             raise ValueError(
                 "Invalid value for `language_code` ({0}), must be one of {1}"
@@ -574,7 +574,7 @@ class Auction(object):
         :param gender: The gender of this Auction.
         :type: int
         """
-        allowed_values = ["0", "1", "2"]
+        allowed_values = [0, 1, 2]
         if gender not in allowed_values:
             raise ValueError(
                 "Invalid value for `gender` ({0}), must be one of {1}"
@@ -833,7 +833,7 @@ class Auction(object):
         :param education: The education of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "-1"]
+        allowed_values = [1, 2, 3, 4, 5, -1]
         if education not in allowed_values:
             raise ValueError(
                 "Invalid value for `education` ({0}), must be one of {1}"
@@ -885,7 +885,7 @@ class Auction(object):
         :param home_ownership_type: The home_ownership_type of this Auction.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1]
         if home_ownership_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `home_ownership_type` ({0}), must be one of {1}"
@@ -1351,7 +1351,7 @@ class Auction(object):
         :param use_of_loan: The use_of_loan of this Auction.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, -1]
         if use_of_loan not in allowed_values:
             raise ValueError(
                 "Invalid value for `use_of_loan` ({0}), must be one of {1}"
@@ -1380,7 +1380,7 @@ class Auction(object):
         :param marital_status: The marital_status of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "-1"]
+        allowed_values = [1, 2, 3, 4, 5, -1]
         if marital_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `marital_status` ({0}), must be one of {1}"
@@ -1432,7 +1432,7 @@ class Auction(object):
         :param employment_status: The employment_status of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "6", "-1"]
+        allowed_values = [1, 2, 3, 4, 5, 6, -1]
         if employment_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `employment_status` ({0}), must be one of {1}"
@@ -1507,7 +1507,7 @@ class Auction(object):
         :param occupation_area: The occupation_area of this Auction.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "-1"]
+        allowed_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, -1]
         if occupation_area not in allowed_values:
             raise ValueError(
                 "Invalid value for `occupation_area` ({0}), must be one of {1}"

@@ -1,6 +1,7 @@
 {
-    "request_desired_discount_rate_max": 5, 
-    "request_has_debt": false, 
-    "request_interest_min": 195, 
-    "request_next_payment_date_from": "2017-07-23T15:03:11.943494"
+    "request_desired_discount_rate_max": 5,
+    "request_has_debt": false,
+    "request_interest_min": 195,
+    "request_income_verification_status": 4,
+    "min_days_till_next_paymeny": true
 }

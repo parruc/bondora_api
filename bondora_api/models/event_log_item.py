@@ -103,7 +103,7 @@ class EventLogItem(object):
         :param event_type: The event_type of this EventLogItem.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5"]
+        allowed_values = [1, 2, 3, 4, 5]
         if event_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `event_type` ({0}), must be one of {1}"

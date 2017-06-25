@@ -83,7 +83,7 @@ class ApiBidSummariesRequest(object):
         :param bid_status_code: The bid_status_code of this ApiBidSummariesRequest.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5"]
+        allowed_values = [0, 1, 2, 3, 4, 5]
         if bid_status_code not in allowed_values:
             raise ValueError(
                 "Invalid value for `bid_status_code` ({0}), must be one of {1}"

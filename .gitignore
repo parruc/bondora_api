@@ -1,6 +1,8 @@
 # Sensitive data
 investhor/config/oauth2.json
+investhor/config/primary.json
 investhor/config/secondary.json
+investhor/config/sell.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

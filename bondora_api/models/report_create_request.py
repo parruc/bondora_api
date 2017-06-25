@@ -77,7 +77,7 @@ class ReportCreateRequest(object):
         :param report_type: The report_type of this ReportCreateRequest.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        allowed_values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         if report_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `report_type` ({0}), must be one of {1}"

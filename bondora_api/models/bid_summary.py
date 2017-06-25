@@ -282,7 +282,7 @@ class BidSummary(object):
         :param status_code: The status_code of this BidSummary.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5"]
+        allowed_values = [0, 1, 2, 3, 4, 5]
         if status_code not in allowed_values:
             raise ValueError(
                 "Invalid value for `status_code` ({0}), must be one of {1}"
@@ -311,7 +311,7 @@ class BidSummary(object):
         :param failure_reason: The failure_reason of this BidSummary.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
         if failure_reason not in allowed_values:
             raise ValueError(
                 "Invalid value for `failure_reason` ({0}), must be one of {1}"

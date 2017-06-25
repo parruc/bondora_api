@@ -151,7 +151,8 @@ class ApiResultBids(object):
         """
 
         if not total_count:
-            raise ValueError("Invalid value for `total_count`, must not be `None`")
+            total_count = 0
+            # raise ValueError("Invalid value for `total_count`, must not be `None`")
         if total_count > 2.147483647E9:
             raise ValueError("Invalid value for `total_count`, must be a value less than or equal to `2.147483647E9`")
         if total_count < 0.0:
@@ -181,7 +182,8 @@ class ApiResultBids(object):
         """
 
         if not count:
-            raise ValueError("Invalid value for `count`, must not be `None`")
+            count = 0
+            # raise ValueError("Invalid value for `count`, must not be `None`")
         if count > 2.147483647E9:
             raise ValueError("Invalid value for `count`, must be a value less than or equal to `2.147483647E9`")
         if count < 0.0:

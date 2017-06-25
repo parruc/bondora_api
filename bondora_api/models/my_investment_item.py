@@ -392,7 +392,7 @@ class MyInvestmentItem(object):
         :param auction_bid_type: The auction_bid_type of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["0", "1", "2"]
+        allowed_values = [0, 1, 2]
         if auction_bid_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `auction_bid_type` ({0}), must be one of {1}"
@@ -605,7 +605,7 @@ class MyInvestmentItem(object):
         :param use_of_loan: The use_of_loan of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "-1"]
+        allowed_values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, -1]
         if use_of_loan not in allowed_values:
             raise ValueError(
                 "Invalid value for `use_of_loan` ({0}), must be one of {1}"
@@ -634,7 +634,7 @@ class MyInvestmentItem(object):
         :param income_verification_status: The income_verification_status of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4"]
+        allowed_values = [1, 2, 3, 4]
         if income_verification_status not in allowed_values:
             raise ValueError(
                 "Invalid value for `income_verification_status` ({0}), must be one of {1}"
@@ -755,7 +755,7 @@ class MyInvestmentItem(object):
         :param gender: The gender of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["0", "1", "2"]
+        allowed_values = [0, 1, 2]
         if gender not in allowed_values:
             raise ValueError(
                 "Invalid value for `gender` ({0}), must be one of {1}"
@@ -1097,6 +1097,19 @@ class MyInvestmentItem(object):
         """
         return self._principal_remaining
 
+
+    @principal_remaining.setter
+    def principal_remaining(self, principal_remaining):
+        """
+        Sets the principal_remaining of this MyInvestmentItem.
+        Remaining principal amount
+
+        :param principal_remaining: The principal_remaining of this MyInvestmentItem.
+        :type: float
+        """
+
+        self._principal_remaining = principal_remaining
+
     @property
     def principal_late_amount(self):
         """
@@ -1176,6 +1189,18 @@ class MyInvestmentItem(object):
         :rtype: float
         """
         return self._late_amount_total
+
+    @late_amount_total.setter
+    def late_amount_total(self, late_amount_total):
+        """
+        Sets the late_amount_total of this MyInvestmentItem.
+        Late amount total
+
+        :param late_amount_total: The late_amount_total of this MyInvestmentItem.
+        :type: float
+        """
+
+        self._late_amount_total = late_amount_total
 
     @property
     def principal_write_off_amount(self):
@@ -1450,7 +1475,9 @@ class MyInvestmentItem(object):
         :param latest_debt_management_stage: The latest_debt_management_stage of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["1", "2", "7", "9", "14", "15", "16", "20", "22", "23", "24", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"]
+        allowed_values = [1, 2, 7, 9, 14, 15, 16, 20, 22, 23, 24, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, -1]
+        if not latest_debt_management_stage:
+            latest_debt_management_stage = -1
         if latest_debt_management_stage not in allowed_values:
             raise ValueError(
                 "Invalid value for `latest_debt_management_stage` ({0}), must be one of {1}"
@@ -1463,7 +1490,7 @@ class MyInvestmentItem(object):
     def latest_debt_management_sub_stage(self):
         """
         Gets the latest_debt_management_sub_stage of this MyInvestmentItem.
-        
+
 
         :return: The latest_debt_management_sub_stage of this MyInvestmentItem.
         :rtype: int
@@ -1474,12 +1501,12 @@ class MyInvestmentItem(object):
     def latest_debt_management_sub_stage(self, latest_debt_management_sub_stage):
         """
         Sets the latest_debt_management_sub_stage of this MyInvestmentItem.
-        
+
 
         :param latest_debt_management_sub_stage: The latest_debt_management_sub_stage of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "36", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71"]
+        allowed_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
         if latest_debt_management_sub_stage not in allowed_values:
             raise ValueError(
                 "Invalid value for `latest_debt_management_sub_stage` ({0}), must be one of {1}"
@@ -1508,7 +1535,9 @@ class MyInvestmentItem(object):
         :param latest_debt_management_stage_type: The latest_debt_management_stage_type of this MyInvestmentItem.
         :type: int
         """
-        allowed_values = ["1", "2", "3", "-1"]
+        allowed_values = [1, 2, 3, -1]
+        if not latest_debt_management_stage_type:
+            latest_debt_management_stage_type = -1
         if latest_debt_management_stage_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `latest_debt_management_stage_type` ({0}), must be one of {1}"
@@ -1659,7 +1688,7 @@ class MyInvestmentItem(object):
     def bought_from_id(self):
         """
         Gets the bought_from_id of this MyInvestmentItem.
-        
+
 
         :return: The bought_from_id of this MyInvestmentItem.
         :rtype: str
@@ -1670,7 +1699,7 @@ class MyInvestmentItem(object):
     def bought_from_id(self, bought_from_id):
         """
         Sets the bought_from_id of this MyInvestmentItem.
-        
+
 
         :param bought_from_id: The bought_from_id of this MyInvestmentItem.
         :type: str
