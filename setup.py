@@ -37,22 +37,19 @@ VERSION = "1.0.0"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "requests-oauthlib"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
 setup(
     name=NAME,
     version=VERSION,
     description="Bondora API V1",
-    author_email="investor@bondora.com",
-    url="https://www.bondora.com",
-    keywords=["Swagger", "Bondora API V1"],
+    author_email="parruc@gmail.com",
+    url="https://www.matteoparrucci.it",
+    keywords=["Bondora API", "P2P investment"],
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     include_package_data=True,
     long_description="""Bondora API version 1""",
-    entry_points="""
-    # -*- Entry points: -*-
-    [console_scripts]
-    bondora_secondary = scripts.secondary:main
-    """,
+    entry_points="""""",
 )

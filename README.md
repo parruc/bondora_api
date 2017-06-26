@@ -1,19 +1,3 @@
-# Generic info
-
-On top of the following auto-documented, auto-generated (using SWAG-codegen) and slightly modified API client implementation I plan to build a serie of scripts to invest in different markets
-
-# Secondary market investments
-
-For the secondary market investments just edit config/secondary.conf and launch script/invest_secondary-py
-
-# Disclaimer
-
-THIS CODE COMES WITH ABSOLUTELY NO WARRANTY. USE IT AT YOUR OWN RISK. THE AUTHOR DOES NOT ENCOURAGE TO USE IT WITH REAL MONEY (ACTUALLY I RECOMMEND AGAINST IT). DO NOT INVEST WHAT YOU CANNOT AFFORD TO LOSE. I HAVE NO AFFILIATION WITH BONDORA OTHER THAN BEING A CLIENT
-
-# Conclusions
-
-Good luck
-
 # bondora_api
 Bondora API version 1
 
