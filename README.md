@@ -214,4 +214,3 @@ Class | Method | HTTP request | Description
 ## Author
 
 investor@bondora.com
-
