@@ -24,15 +24,15 @@
 
 from __future__ import absolute_import
 
-import sys
 import os
 import re
+import sys
 
 # python 2 and python 3 compatibility library
 from six import iteritems
 
-from ..configuration import Configuration
 from ..api_client import ApiClient
+from ..configuration import Configuration
 
 
 class AuctionApi(object):
@@ -54,7 +54,7 @@ class AuctionApi(object):
     def auction_get(self, id, **kwargs):
         """
         Gets Auction info by auction identifier
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -81,7 +81,7 @@ class AuctionApi(object):
     def auction_get_with_http_info(self, id, **kwargs):
         """
         Gets Auction info by auction identifier
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -141,7 +141,7 @@ class AuctionApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['oauth2']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
@@ -158,7 +158,7 @@ class AuctionApi(object):
     def auction_get_active(self, **kwargs):
         """
         Gets list of active Auctions
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -210,7 +210,7 @@ class AuctionApi(object):
     def auction_get_active_with_http_info(self, **kwargs):
         """
         Gets list of active Auctions
-        
+
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -350,7 +350,7 @@ class AuctionApi(object):
             select_header_content_type([])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['oauth2']
 
         return self.api_client.call_api(resource_path, 'GET',
                                             path_params,
