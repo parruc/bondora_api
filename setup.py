@@ -24,7 +24,6 @@
 
 import sys
 
-from setuptools import find_packages
 from setuptools import setup
 
 NAME = "bondora_api"
@@ -47,9 +46,9 @@ setup(
     url="https://www.matteoparrucci.it",
     keywords=["Bondora API", "P2P investment"],
     install_requires=REQUIRES,
-    packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
     long_description="""Bondora API version 1""",
     entry_points="""""",
 )
+
